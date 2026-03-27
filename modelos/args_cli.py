@@ -15,15 +15,17 @@ class ArgumentosCLI:
         return f'Caminho entrada: {self.entrada}\nCaminho saida: {self.saida}'
 
     
-    def _get_entrada(self):
+    def _get_entrada(self) -> str:
         entrada = self.args.entrada
         if entrada == None:
-            entrada = input(str('Digite o caminho da pasta que gostaria de organizar: '))
+            # entrada = input(str('Digite o caminho da pasta que gostaria de organizar: '))
+            entrada = '../Teste/entrada'
         return entrada
     
-    def _get_saida(self):
+    def _get_saida(self) -> str:
         if self.args.saida == None:
-            return './saida/' 
+            # return './saida/' 
+            return '../Teste/saida/' 
         return self.args.saida 
     
 
